@@ -1,0 +1,66 @@
+package Babygin;
+
+import java.util.ArrayList;
+
+public class Babygin {
+	static int[][] all = new int[720][];
+
+	public static void main(String[] args) {
+		String input = "123123";
+		ArrayList<Integer> result = new ArrayList<Integer>();
+		ArrayList<Integer> arr = new ArrayList<Integer>();
+
+		for (int i = 0; i < input.length(); i++) {
+			arr.add(input.charAt(i) - '0');
+		}
+		help(arr, result);
+//		for (int i = 0; i < all.size(); i++) {
+//			for (int j = 0; j < 6; j++) {
+//				System.out.print(all.get(i).get(j));
+//			}
+//			System.out.println("");
+//		}
+		for (int i = 0; i < all.size(); i++) {
+			int flag = 0;
+			ArrayList<Integer> temp = all.get(i);
+			if (temp.get(0) == temp.get(1) && temp.get(1) == temp.get(2)) {
+				flag += 1;
+			}
+			if (temp.get(3) == temp.get(4) && temp.get(4) == temp.get(5)) {
+				flag += 1;
+			}
+			if (temp.get(0) + 1 == temp.get(1) && temp.get(1) + 1 == temp.get(2)) {
+				flag += 1;
+			}
+			if (temp.get(3) + 1 == temp.get(4) && temp.get(4) + 1 == temp.get(5)) {
+				flag += 1;
+			}
+			if (flag == 2) {
+				System.out.println("Babygin!");
+				return;
+			}
+				
+		}
+		System.out.println("Not Babygin!");
+
+	}
+
+	public static void help(ArrayList<Integer> arr, ArrayList<Integer> result) {
+		if (result.size() == 6) {
+			ArrayList<Integer> copy = new ArrayList<Integer>();
+			for (int i = 0; i < result.size(); i++) {
+				copy.add(result.get(i));
+			}
+			all.add(copy);
+		}
+		for (int i = 0; i < arr.size(); i++) {
+			int temp = arr.get(i);
+			result.add(temp);
+			arr.remove(i);
+			help(arr, result);
+			result.remove(result.size() - 1);
+			arr.add(i, temp);
+		}
+
+	}
+}

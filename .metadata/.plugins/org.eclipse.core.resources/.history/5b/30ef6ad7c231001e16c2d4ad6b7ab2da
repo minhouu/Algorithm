@@ -1,0 +1,36 @@
+package Babygin;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Babygin {
+	static ArrayList<ArrayList<Integer>> all = new ArrayList<ArrayList<Integer>>();
+	public static void main(String[] args) {
+		String input = "101123";
+		ArrayList<Integer> result = new ArrayList<Integer>();
+		ArrayList<Integer> arr = new ArrayList<Integer>();
+		
+		
+		for (int i = 0; i < input.length(); i++) {
+			arr.add(input.charAt(i) - '0');
+		}
+		
+	}
+
+	public static void help(ArrayList<Integer> arr, ArrayList<Integer> result) {
+		if (result.size() == 6) {
+			ArrayList<Integer> copy = new ArrayList<Integer>();
+			for (int i = 0; i < result.size(); i++) {
+				copy.add(result.get(i));
+			}
+			all.add(copy);
+		}
+		for (int i = 0; i < arr.size(); i++) {
+			int temp = arr.get(i);
+			result.add(temp);
+			arr.remove(i);
+			help(arr, result);
+		}
+
+	}
+}

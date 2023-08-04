@@ -1,0 +1,45 @@
+package sol1;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		// 구하고자 하는 목표 : 스티커를 떼서 가질 수 있는 점수가 가장 높게 만든다.
+		// input section
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		for (int testCase = 0; testCase < N; testCase++) {
+			int n = sc.nextInt();
+			int[][] arr = new int[2][n];
+			for (int i = 0; i < 2; i++) {
+				for (int j = 0; j < n; j++) {
+					arr[i][j] = sc.nextInt();
+				}
+			}
+			
+		// dp(column, status);
+		// c번째 열 까지 뗀 스티커의 가치의 합
+		// status 
+		// 0 -> 전 열에서 스티커 안 뗐을 때
+		// 1 -> 전 열에서 위쪽 스티커 떼어서, c번쩨 열에서 1번째 줄 쓸 수 없을 때
+		// 2 -> 전 열에서 밑에쪽 스티커 떼어서, c번째 열에서 2번째 줄 쓸 수 없을 때
+		// dp(n, status)의 최대값을 구하면 된다. 
+
+		}
+	}
+	public static int dp(int[] dp, int c, int s, int sum, int n) {
+		if (c==n) {
+			return sum;
+		}
+		if (s==0) {
+			int result = dp(dp, c+1, 0, sum, n);
+			result = Math.max(dp(dp, c+1, 1, sum+dp[0][c], n, dp(dp, c+1, 2, sum + dp[1][c], n) )
+		}
+		if (s==1) {
+			
+		}
+		if (s==2) {
+			
+		}
+	}
+}

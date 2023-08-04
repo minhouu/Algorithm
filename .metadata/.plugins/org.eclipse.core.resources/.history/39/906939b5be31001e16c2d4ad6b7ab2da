@@ -1,0 +1,17 @@
+package Babygin;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+
+public class Babygin {
+	public static void main(String[] args) {
+		String input  = "667677";
+		int[] arr = int[input.length()];
+		for (int i = 0; i < input.length() ; i++) {
+			int intInput = input.charAt(i) - '0';
+
+		}
+		
+	}
+}

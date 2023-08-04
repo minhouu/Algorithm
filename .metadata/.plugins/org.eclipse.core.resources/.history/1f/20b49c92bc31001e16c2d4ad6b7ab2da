@@ -1,0 +1,15 @@
+package Babygin;
+
+import java.util.HashMap;
+
+public class Babygin {
+	public static void main(String[] args) {
+		HashMap<Integer, Integer> memo = new HashMap<>();
+		String input  = "667677";
+		
+		for (int i = 0; i < input.length() ; i++) {
+			memo.put(Integer.toString(input.charAt(i)), memo.getOrDefault(input.charAt(i), 0)+1)
+			input.charAt(i)
+		}
+	}
+}

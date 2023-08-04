@@ -1,0 +1,8 @@
+package Babygin;
+
+import java.util.HashMap;
+
+public class Babygin {
+	HashMap<Integer, Integer> memo = new HashMap<>();
+	
+}

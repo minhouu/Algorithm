@@ -1,0 +1,14 @@
+package sol1;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		// 구하고자 하는 목표 : 스티커를 떼서 가질 수 있는 점수가 가장 높게 만든다.
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		for (int testCase = 0; testCase < N; testCase++) {
+
+		}
+	}
+}

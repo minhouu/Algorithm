@@ -1,0 +1,50 @@
+[
+	{
+		"videoNo": 1, 
+		"reviewNo": 1, 
+		"nickName": "태훈", 
+		"content": "운동이 맛있어요"
+	},
+	{
+		"videoNo": 1, 
+		"reviewNo": 2, 
+		"nickName": "성호", 
+		"content": "낼름낼름"
+	},
+	{
+		"videoNo": 1, 
+		"reviewNo": 3, 
+		"nickName": "성호남친", 
+		"content": "성호사랑해"
+	},
+	{
+		"videoNo": 2, 
+		"reviewNo": 1, 
+		"nickName": "민호", 
+		"content": "집가고싶다"
+	},
+	{
+		"videoNo": 2, 
+		"reviewNo": 2, 
+		"nickName": "민호", 
+		"content": "끼애애애액"
+	},
+	{
+		"videoNo": 2, 
+		"reviewNo": 2, 
+		"nickName": "으악", 
+		"content": "ㅋㅋ"
+	},
+	{
+		"videoNo": 3, 
+		"reviewNo": 1, 
+		"nickName": "ㅋㅋ", 
+		"content": "ㅋㅋㅋㅋ"
+	},
+	{
+		"videoNo": 3, 
+		"reviewNo": 1, 
+		"nickName": "복ㅋㅋㅌㅊㅋㅌ", 
+		"content": "ㄹㅇㅋㅋ"
+	}
+]
