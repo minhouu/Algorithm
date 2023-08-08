@@ -21,7 +21,7 @@ public class Main {
 		nodeStart.traverse();
 		
 		nodeStart.delete(node3);
-		nodeStart.traverse();
+		nodeStart.traverse(); 
 		
 	}
 

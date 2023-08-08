@@ -18,18 +18,11 @@ public class DoubleLinkedList {
 	}
 
 	public void insert(DoubleLinkedList addr, DoubleLinkedList neo) {
-		// neo 앞뒤로 연결
-		neo.pre = addr;
-		neo.nxt = addr.nxt;
-
-		// addr의 nxt가 존재하면
-		// addr.nxt의 pre는 새 dll이 된다
-		if (addr.nxt != null)
-			addr.nxt.pre = neo;
-
-		// addr의 nxt는 neo
-		addr.nxt = neo;
-
+		addr.pre.nxt = neo;
+		neo.pre = addr.pre;
+		addr.pre = neo;
+		neo.nxt = addr;
+		
 	}
 
 	public void delete(DoubleLinkedList addr) {
